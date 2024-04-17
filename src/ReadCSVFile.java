@@ -1,3 +1,11 @@
+/**Class: ReadCSCVFile
+ * @author Tyler Robinson
+ * @version 1.5
+ * Course: ITEC 2140 Spring 2023
+ * Written: April 17, 2024
+ */
+
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -15,7 +23,7 @@ public class ReadCSVFile {
             String line;
 
             while ((line = reader.readLine()) != null) {
-                String[] numbers = line.split(","); // Split the line by comma
+                String[] numbers = line.split(",");
                 for (String numString : numbers) {
                     int num = Integer.parseInt(numString.trim());
                     sum += num;
@@ -34,12 +42,12 @@ public class ReadCSVFile {
             return;
         }
 
-        // Print sum, lowest, highest
+
         System.out.println("The sum is: " + sum);
         System.out.println("The lowest number is: " + lowest);
         System.out.println("The highest number is: " + highest);
 
-        // Calculate and print average
+
         if (count > 0) {
             double average = (double) sum / count;
             System.out.println("The average of the numbers is: " + average);
